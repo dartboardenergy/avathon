@@ -1,0 +1,891 @@
+{
+  "Getting Started": {
+    "name": "Getting Started",
+    "endpoints": [
+      {
+        "name": "Overview",
+        "url": "/reference/overview-api",
+        "method": "GET",
+        "category": "Getting Started",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Security",
+        "url": "/reference/security",
+        "method": "GET",
+        "category": "Getting Started",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      }
+    ],
+    "subcategories": {},
+    "parent_url": null
+  },
+  "Avathon APM API": {
+    "name": "Avathon APM API",
+    "endpoints": [
+      {
+        "name": "General",
+        "url": "/reference/assets",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Asset Performance",
+        "url": "/reference/assetperformancecategory",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Alarms",
+        "url": "/reference/alarmcodes",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Custom Availability",
+        "url": "/reference/customavailabilityconfiguration",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Forecast",
+        "url": "/reference/forecastalgorithms",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Actual vs. Budgeted",
+        "url": "/reference/actualvsbudgeted-1",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Predict",
+        "url": "/reference/predictcomponents",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Maintain",
+        "url": "/reference/componentconfigurations",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Solar",
+        "url": "/reference/dcloss",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Wind",
+        "url": "/reference/powercurve",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Data",
+        "url": "/reference/mappings",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Historian",
+        "url": "/reference/rawmappings",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Notifications",
+        "url": "/reference/getnotifications",
+        "method": "GET",
+        "category": "Avathon APM API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      }
+    ],
+    "subcategories": {
+      "General": [
+        {
+          "name": "Assets",
+          "url": "/reference/assets",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Device Types",
+          "url": "/reference/devicetypes",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Devices",
+          "url": "/reference/devices",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Power Curve",
+          "url": "/reference/devicepowercurve",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Day Light Data",
+          "url": "/reference/daylighthours",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Device Availability",
+          "url": "/reference/deviceavailability",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Curtailment",
+          "url": "/reference/curtailment",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Users",
+          "url": "/reference/users",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Asset Performance": [
+        {
+          "name": "Asset Performance Category",
+          "url": "/reference/assetperformancecategory",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Asset Performance",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Asset Performance",
+          "url": "/reference/assetperformance",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Asset Performance",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Update Asset Performance",
+          "url": "/reference/putassetperformance",
+          "method": "PUT",
+          "category": "Avathon APM API",
+          "subcategory": "Asset Performance",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Alarms": [
+        {
+          "name": "Alarm Codes",
+          "url": "/reference/alarmcodes",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Alarms",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Processed Alarms",
+          "url": "/reference/alarms-3",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Alarms",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Raw Alarms",
+          "url": "/reference/rawalarms",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Alarms",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Custom Availability": [
+        {
+          "name": "Custom Availability Configuration",
+          "url": "/reference/customavailabilityconfiguration",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Custom Availability",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Custom Availability Values",
+          "url": "/reference/customavailability",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Custom Availability",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Forecast": [
+        {
+          "name": "Forecast Algorithms",
+          "url": "/reference/forecastalgorithms",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Forecast",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Forecast Data Results",
+          "url": "/reference/forecastresults",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Forecast",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Forecast Data History",
+          "url": "/reference/forecasthistory",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Forecast",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Forecast Outage Event Data",
+          "url": "/reference/forecastoutageevent",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Forecast",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Create Forecast Outage Event",
+          "url": "/reference/postforecastoutageevent",
+          "method": "POST",
+          "category": "Avathon APM API",
+          "subcategory": "Forecast",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Actual vs. Budgeted": [
+        {
+          "name": "Actual vs Budgeted KPIs",
+          "url": "/reference/actualvsbudgeted-1",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Actual vs. Budgeted",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Predict": [
+        {
+          "name": "Predict Components",
+          "url": "/reference/predictcomponents",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Predict",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Health Alerts",
+          "url": "/reference/healthalerts",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Predict",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Health Scores",
+          "url": "/reference/healthscores-1",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Predict",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Historical Health Scores",
+          "url": "/reference/historicalhealthscores",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Predict",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Actual vs. Predicted Values",
+          "url": "/reference/actualvspredicted",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Predict",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Maintain": [
+        {
+          "name": "Component Configurations",
+          "url": "/reference/componentconfigurations",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Component Inventory",
+          "url": "/reference/componentinventory",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Component Inventory History",
+          "url": "/reference/componentinventoryhistory",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Component Tickets",
+          "url": "/reference/componenttickets",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Create Component Tickets",
+          "url": "/reference/postcomponenttickets",
+          "method": "POST",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Component Tickets History",
+          "url": "/reference/componentticketshistory",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Maintain",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Solar": [
+        {
+          "name": "DC Loss",
+          "url": "/reference/dcloss",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Solar",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Performance Ratio",
+          "url": "/reference/performanceratio-1",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Solar",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Wind": [
+        {
+          "name": "Binned Power Curve",
+          "url": "/reference/powercurve",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Wind",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Data": [
+        {
+          "name": "Mappings",
+          "url": "/reference/mappings",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Query",
+          "url": "/reference/query",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Historian": [
+        {
+          "name": "Historian Mappings",
+          "url": "/reference/rawmappings",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Historian",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Historian Site Aggregation",
+          "url": "/reference/rawquerysite",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Historian",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Historian Device Aggregation",
+          "url": "/reference/rawquerydevice",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Historian",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Historian Raw Data",
+          "url": "/reference/rawquery",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Historian",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Notifications": [
+        {
+          "name": "Notifications",
+          "url": "/reference/getnotifications",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Notifications",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": true,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Update Notification",
+          "url": "/reference/putnotifications",
+          "method": "PUT",
+          "category": "Avathon APM API",
+          "subcategory": "Notifications",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Create Notification",
+          "url": "/reference/postnotifications",
+          "method": "POST",
+          "category": "Avathon APM API",
+          "subcategory": "Notifications",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Notification Rules",
+          "url": "/reference/notificationrules",
+          "method": "GET",
+          "category": "Avathon APM API",
+          "subcategory": "Notifications",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ]
+    },
+    "parent_url": null
+  },
+  "Translation API": {
+    "name": "Translation API",
+    "endpoints": [
+      {
+        "name": "GPM General",
+        "url": "/reference/plants",
+        "method": "GET",
+        "category": "Translation API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "GPM Alarms",
+        "url": "/reference/gpmalarms",
+        "method": "GET",
+        "category": "Translation API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "GPM Raw Data",
+        "url": "/reference/rawmappingsgpm",
+        "method": "GET",
+        "category": "Translation API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "Power Factors Data",
+        "url": "/reference/querypfs",
+        "method": "GET",
+        "category": "Translation API",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      }
+    ],
+    "subcategories": {
+      "GPM General": [
+        {
+          "name": "Plants",
+          "url": "/reference/plants",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Plant",
+          "url": "/reference/plant",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "Elements",
+          "url": "/reference/elements",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM General",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "GPM Alarms": [
+        {
+          "name": "Alarms",
+          "url": "/reference/gpmalarms",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM Alarms",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "GPM Raw Data": [
+        {
+          "name": "Datasource",
+          "url": "/reference/rawmappingsgpm",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM Raw Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "DataList",
+          "url": "/reference/rawquerygpm",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM Raw Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        },
+        {
+          "name": "DataList/v2",
+          "url": "/reference/rawquerygpmv2",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "GPM Raw Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ],
+      "Power Factors Data": [
+        {
+          "name": "Query",
+          "url": "/reference/querypfs",
+          "method": "GET",
+          "category": "Translation API",
+          "subcategory": "Power Factors Data",
+          "file_path": "html_dumps_all/getnotifications.html",
+          "is_active": false,
+          "html_title": "",
+          "canonical_url": ""
+        }
+      ]
+    },
+    "parent_url": null
+  },
+  "FAQ": {
+    "name": "FAQ",
+    "endpoints": [
+      {
+        "name": "What time zone is the data in/need to be in when interfacing with APIs?",
+        "url": "/reference/when-interfacing-with-apis-time-zone-is-the-data-inneed-to-be-in",
+        "method": "GET",
+        "category": "FAQ",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      },
+      {
+        "name": "How can I make API calls most efficient?",
+        "url": "/reference/how-can-i-make-api-calls-most-efficient",
+        "method": "GET",
+        "category": "FAQ",
+        "subcategory": null,
+        "file_path": "html_dumps_all/getnotifications.html",
+        "is_active": false,
+        "html_title": "",
+        "canonical_url": ""
+      }
+    ],
+    "subcategories": {},
+    "parent_url": null
+  }
+}
