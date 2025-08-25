@@ -1,0 +1,4726 @@
+📋 Running proper extraction for 54 endpoints...
+
+[1/54] /reference/assets
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/assets
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/assets
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 20
+      • Response spans: 3
+      • Total parameter elements: 24
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/assets
+    📖 Description: Get data of all subscribed assets....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - optional
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 20 object property labels
+    ✅ Built 200 schema with 23 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ units (string)
+          └─ site_capacity (string)
+        • data (array)
+          └─ asset_id (integer)
+          └─ asset_type (string)
+          └─ asset_name (string)
+          └─ ... and 16 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/assets
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🟢 OPTIONAL
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_assets.json
+  ✅ Saved: proper_extractions_all/reference_assets.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_assets.json
+
+[2/54] /reference/devicetypes
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/devicetypes
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/devicetypes
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 7
+      • Response spans: 3
+      • Total parameter elements: 11
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/device_types
+    📖 Description: Get a list of all device types for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 7 object property labels
+    ✅ Built 200 schema with 9 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ number_of_devices (integer)
+        • data (array)
+          └─ device_type (string)
+          └─ name (string)
+          └─ manufacturer (string)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/devicetypes
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_devicetypes.json
+  ✅ Saved: proper_extractions_all/reference_devicetypes.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_devicetypes.json
+
+[3/54] /reference/devices
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/devices
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/devices
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 13
+      • Response spans: 3
+      • Total parameter elements: 17
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/devices
+    📖 Description: Get a list of all devices for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 15 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 2 more
+        • data (array)
+          └─ device_id (integer)
+          └─ asset_id (integer)
+          └─ name (string)
+          └─ ... and 5 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/devices
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_devices.json
+  ✅ Saved: proper_extractions_all/reference_devices.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_devices.json
+
+[4/54] /reference/devicepowercurve
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/devicepowercurve
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/devicepowercurve
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 3
+      • Object properties: 10
+      • Response spans: 5
+      • Total parameter elements: 18
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/power_curve
+    📖 Description: Get power curve data for a specific device type....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 3 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - optional
+    ✅ default (string) - optional
+  📊 Total query parameters: 3
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 10 object property labels
+    ✅ Built 200 schema with 11 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ device_id (integer)
+        • data (array)
+          └─ name (string)
+          └─ is_default (string)
+          └─ device_type (string)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/devicepowercurve
+Query parameters found: 3
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID.
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific device ID.
+  • default (string) 🟢 OPTIONAL
+    Filter for default power curve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_devicepowercurve.json
+  ✅ Saved: proper_extractions_all/reference_devicepowercurve.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_devicepowercurve.json
+
+[5/54] /reference/daylighthours
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/daylighthours
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/daylighthours
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 3
+      • Object properties: 13
+      • Response spans: 2
+      • Total parameter elements: 18
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/daylight_data
+    📖 Description: Get Day light duration hours data....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 3 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+  📊 Total query parameters: 3
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 13 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ start_date (string)
+          └─ ... and 1 more
+        • data (array)
+          └─ asset (string)
+          └─ date (string)
+          └─ sunrise_time_stamp (string)
+          └─ ... and 4 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/daylighthours
+Query parameters found: 3
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID.
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_daylighthours.json
+  ✅ Saved: proper_extractions_all/reference_daylighthours.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_daylighthours.json
+
+[6/54] /reference/deviceavailability
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/deviceavailability
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/deviceavailability
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 17
+      • Response spans: 5
+      • Total parameter elements: 28
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/device_availability?aggregation=daily
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ device_id (string) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 17 object property labels
+    ✅ Built 200 schema with 21 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 8 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ device (string)
+          └─ ... and 5 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/deviceavailability
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Defaults to daily. Provide desired aggregation level
+  • device_id (string) 🔴 REQUIRED
+    Filter by devices (comma separated list of device_ids)
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_deviceavailability.json
+  ✅ Saved: proper_extractions_all/reference_deviceavailability.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_deviceavailability.json
+
+[7/54] /reference/curtailment
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/curtailment
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/curtailment
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 19
+      • Response spans: 3
+      • Total parameter elements: 27
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/curtailment?aggregation=hourly
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ device_id (string) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 19 object property labels
+    ✅ Built 200 schema with 21 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 6 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ device (string)
+          └─ ... and 7 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/curtailment
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Defaults to hourly. Provide desired aggregation level
+  • device_id (string) 🟢 OPTIONAL
+    Filter for one or more device ids
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_curtailment.json
+  ✅ Saved: proper_extractions_all/reference_curtailment.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_curtailment.json
+
+[8/54] /reference/users
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/users
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/users
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 13
+      • Response spans: 3
+      • Total parameter elements: 17
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/users
+    📖 Description: Get users data for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - optional
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 14 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ number_of_users (integer)
+        • data (array)
+          └─ first_name (string)
+          └─ last_name (string)
+          └─ display_name (string)
+          └─ ... and 3 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/users
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🟢 OPTIONAL
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_users.json
+  ✅ Saved: proper_extractions_all/reference_users.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_users.json
+
+[9/54] /reference/assetperformancecategory
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/assetperformancecategory
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/assetperformancecategory
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 8
+      • Response spans: 2
+      • Total parameter elements: 11
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/asset_performance_category
+    📖 Description: Get asset performance categories for a given asset...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 8 object property labels
+    ✅ Built 200 schema with 8 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_type (string)
+        • data (array)
+          └─ category_id (integer)
+          └─ category (string)
+          └─ asset_type (string)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/assetperformancecategory
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_assetperformancecategory.json
+  ✅ Saved: proper_extractions_all/reference_assetperformancecategory.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_assetperformancecategory.json
+
+[10/54] /reference/assetperformance
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/assetperformance
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/assetperformance
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 18
+      • Response spans: 2
+      • Total parameter elements: 27
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/asset_performance
+    📖 Description: Get asset performance data for a given asset and y...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ aggregation (string) - optional
+    ✅ year (integer) - required
+    ✅ month (integer) - required
+    ✅ day (integer) - optional
+    ✅ category_id (string) - optional
+    ✅ device_id (integer) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 18 object property labels
+    ✅ Built 200 schema with 18 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 4 more
+        • data (array)
+          └─ asset (string)
+          └─ year (number)
+          └─ month (number)
+          └─ ... and 6 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/assetperformance
+Query parameters found: 7
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • aggregation (string) 🟢 OPTIONAL
+    Provide desired aggregation level. Default aggregation is monthly.
+  • year (integer) 🔴 REQUIRED
+    Filter by specific Year
+  • month (integer) 🔴 REQUIRED
+    Filter by specific Month
+  • day (integer) 🟢 OPTIONAL
+    Filter by specific day. Only applicable for daily aggregation. If not passed default value is 1.
+  • category_id (string) 🟢 OPTIONAL
+    Can be a single category Id or a comma separated list of category Ids.
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device Id.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_assetperformance.json
+  ✅ Saved: proper_extractions_all/reference_assetperformance.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_assetperformance.json
+
+[11/54] /reference/putassetperformance
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/putassetperformance
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/putassetperformance
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 11
+      • Response spans: 2
+      • Total parameter elements: 20
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: PUT https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/asset_performance?aggregation=daily
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - optional
+    ✅ string (string) - required
+    ✅ aggregation (string) - required
+    ✅ category_id (integer) - required
+    ✅ value (number) - required
+    ✅ units (string) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 11 object property labels
+    ✅ Built 200 schema with 11 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ device_id (string)
+          └─ year (string)
+          └─ ... and 3 more
+        • data (array)
+          └─ category_id (integer)
+          └─ value (number)
+          └─ units (string)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/putassetperformance
+Query parameters found: 7
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Provide Asset Id.
+  • device_id (integer) 🟢 OPTIONAL
+    Provide device Id. Leave it empty for asset level values.
+  • string (string) 🔴 REQUIRED
+    Provide date in YYYY-MM-DD format for which category Id value needs to be updated. For monthly values provide the date for the first day of the month i.e. 2021-01-01
+  • aggregation (string) 🔴 REQUIRED
+    Provide aggregation level of the category
+  • category_id (integer) 🔴 REQUIRED
+    Provide category Id to update. Only Custom KPIs and Custom Availability can be updated.
+  • value (number) 🔴 REQUIRED
+    Provide value for the category Id.
+  • units (string) 🟢 OPTIONAL
+    Provide units of the value.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_putassetperformance.json
+  ✅ Saved: proper_extractions_all/reference_putassetperformance.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_putassetperformance.json
+
+[12/54] /reference/alarmcodes
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/alarmcodes
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/alarmcodes
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 2
+      • Object properties: 18
+      • Response spans: 2
+      • Total parameter elements: 22
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/alarm_codes
+    📖 Description: Get a list of all alarm codes for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 2 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 2
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 18 object property labels
+    ✅ Built 200 schema with 18 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 4 more
+        • data (array)
+          └─ alarm_code (integer)
+          └─ description (string)
+          └─ category (string)
+          └─ ... and 6 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/alarmcodes
+Query parameters found: 2
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_alarmcodes.json
+  ✅ Saved: proper_extractions_all/reference_alarmcodes.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_alarmcodes.json
+
+[13/54] /reference/alarms-3
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/alarms-3
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/alarms-3
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 10
+      • Object properties: 39
+      • Response spans: 3
+      • Total parameter elements: 52
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/alarms
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 10 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device_id (string) - optional
+    ✅ fault_code (integer) - optional
+    ✅ category (string) - optional
+    ✅ fault_type (string) - optional
+    ✅ available (boolean) - optional
+    ✅ fault_order (boolean) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 10
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 39 object property labels
+    ✅ Built 200 schema with 41 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ start_date (string)
+          └─ ... and 7 more
+        • data (array)
+          └─ alarm_code (integer)
+          └─ alarm_code_description (string)
+          └─ gads_category (string)
+          └─ ... and 26 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/alarms-3
+Query parameters found: 10
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • device_id (string) 🟢 OPTIONAL
+    Filter by devices (comma separated list of device_ids)
+  • fault_code (integer) 🟢 OPTIONAL
+    Filter by fault code
+  • category (string) 🟢 OPTIONAL
+    Filter by fault category
+  • fault_type (string) 🟢 OPTIONAL
+    Filter by fault type (comma separated list)
+  • available (boolean) 🟢 OPTIONAL
+    Filter by fault availability
+  • fault_order (boolean) 🟢 OPTIONAL
+    Filter to show secondary faults (default is false)
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_alarms_3.json
+  ✅ Saved: proper_extractions_all/reference_alarms_3.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_alarms_3.json
+
+[14/54] /reference/rawalarms
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawalarms
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawalarms
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 23
+      • Response spans: 2
+      • Total parameter elements: 30
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/raw_alarms
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device (string) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 23 object property labels
+    ✅ Built 200 schema with 23 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ start_date (string)
+          └─ ... and 5 more
+        • data (array)
+          └─ device (string)
+          └─ device_metadata (string)
+          └─ datasource (string)
+          └─ ... and 10 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawalarms
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • device (string) 🟢 OPTIONAL
+    Filter by device name.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawalarms.json
+  ✅ Saved: proper_extractions_all/reference_rawalarms.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawalarms.json
+
+[15/54] /reference/customavailabilityconfiguration
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/customavailabilityconfiguration
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/customavailabilityconfiguration
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 13
+      • Response spans: 6
+      • Total parameter elements: 20
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/custom_availability_configuration
+    📖 Description: Get all the custom availability configurations for...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 6 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 17 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+        • data (array)
+          └─ availability_config_id (integer)
+          └─ asset (string)
+          └─ name (string)
+          └─ ... and 10 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/customavailabilityconfiguration
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_customavailabilityconfiguration.json
+  ✅ Saved: proper_extractions_all/reference_customavailabilityconfiguration.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_customavailabilityconfiguration.json
+
+[16/54] /reference/customavailability
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/customavailability
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/customavailability
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 34
+      • Response spans: 2
+      • Total parameter elements: 43
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/custom_availability?aggregation=daily
+    📖 Description: Get all the custom availability values as per the ...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device_id (integer) - optional
+    ✅ aggregation (string) - required
+    ✅ availability_config_id (string) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 34 object property labels
+    ✅ Built 200 schema with 34 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ timezone (string)
+          └─ ... and 10 more
+        • data (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ availability_config_id (integer)
+          └─ ... and 16 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/customavailability
+Query parameters found: 7
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date in YYYY-MM-DD format
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date in YYYY-MM-DD format
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID.
+  • aggregation (string) 🔴 REQUIRED
+    Defaults to daily. Provide desired aggregation level
+  • availability_config_id (string) 🟢 OPTIONAL
+    Can be a single availability config ID or a comma separated list of availability config IDs.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_customavailability.json
+  ✅ Saved: proper_extractions_all/reference_customavailability.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_customavailability.json
+
+[17/54] /reference/forecastalgorithms
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/forecastalgorithms
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/forecastalgorithms
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 24
+      • Response spans: 4
+      • Total parameter elements: 29
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_algorithms
+    📖 Description: Get all the forecast algorithm configurations for ...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 4 response span elements
+    🔍 Found 24 object property labels
+    ✅ Built 200 schema with 26 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ asset_type (integer)
+        • data (array)
+          └─ asset (string)
+          └─ algorithm_id (integer)
+          └─ algorithm_name (string)
+          └─ ... and 9 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/forecastalgorithms
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_forecastalgorithms.json
+  ✅ Saved: proper_extractions_all/reference_forecastalgorithms.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_forecastalgorithms.json
+
+[18/54] /reference/forecastresults
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/forecastresults
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/forecastresults
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 4
+      • Object properties: 26
+      • Response spans: 2
+      • Total parameter elements: 32
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_results
+    📖 Description: Get all the forecast results data for an asset ID,...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 4 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ algorithm_id (integer) - required
+  📊 Total query parameters: 4
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 26 object property labels
+    ✅ Built 200 schema with 24 properties
+    ✅ Built 400/401 schemas with 3 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ algorithm_id (integer)
+          └─ ... and 6 more
+        • data (array)
+          └─ asset (string)
+          └─ algorithm_name (string)
+          └─ forecast_at_timestamp (string)
+          └─ ... and 10 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ error_percent_lower (string)
+          └─ error_percent_upper (string)
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ error_percent_lower (string)
+          └─ error_percent_upper (string)
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/forecastresults
+Query parameters found: 4
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date in YYYY-MM-DD format
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date in YYYY-MM-DD format
+  • algorithm_id (integer) 🔴 REQUIRED
+    Filter for specific Algorithm ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 2 properties
+  Status 401: 2 properties
+
+📄 Results saved to: proper_extraction__reference_forecastresults.json
+  ✅ Saved: proper_extractions_all/reference_forecastresults.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_forecastresults.json
+
+[19/54] /reference/forecasthistory
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/forecasthistory
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/forecasthistory
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 3
+      • Object properties: 21
+      • Response spans: 2
+      • Total parameter elements: 26
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_history
+    📖 Description: Get all the forecast history data for an asset ID,...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 3 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ forecast_date (string) - required
+    ✅ algorithm_id (integer) - required
+  📊 Total query parameters: 3
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 21 object property labels
+    ✅ Built 200 schema with 19 properties
+    ✅ Built 400/401 schemas with 3 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ algorithm_id (integer)
+          └─ ... and 1 more
+        • data (array)
+          └─ asset (string)
+          └─ algorithm_name (string)
+          └─ forecast_at_timestamp (string)
+          └─ ... and 10 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ error_percent_lower (string)
+          └─ error_percent_upper (string)
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ error_percent_lower (string)
+          └─ error_percent_upper (string)
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/forecasthistory
+Query parameters found: 3
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • forecast_date (string) 🔴 REQUIRED
+    Filter by start date in YYYY-MM-DD format
+  • algorithm_id (integer) 🔴 REQUIRED
+    Filter for specific Algorithm ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 2 properties
+  Status 401: 2 properties
+
+📄 Results saved to: proper_extraction__reference_forecasthistory.json
+  ✅ Saved: proper_extractions_all/reference_forecasthistory.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_forecasthistory.json
+
+[20/54] /reference/forecastoutageevent
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/forecastoutageevent
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/forecastoutageevent
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 4
+      • Object properties: 29
+      • Response spans: 2
+      • Total parameter elements: 35
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_outage_event
+    📖 Description: Get all the forecast outage event data for an asse...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 4 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device_id (integer) - optional
+  📊 Total query parameters: 4
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 29 object property labels
+    ✅ Built 200 schema with 29 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ device_id (integer)
+          └─ ... and 6 more
+        • data (array)
+          └─ asset (string)
+          └─ time_stamp (string)
+          └─ resolution_time_stamp (string)
+          └─ ... and 15 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/forecastoutageevent
+Query parameters found: 4
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date in YYYY-MM-DD format
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date in YYYY-MM-DD format
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_forecastoutageevent.json
+  ✅ Saved: proper_extractions_all/reference_forecastoutageevent.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_forecastoutageevent.json
+
+[21/54] /reference/postforecastoutageevent
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/postforecastoutageevent
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/postforecastoutageevent
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 10
+      • Object properties: 31
+      • Response spans: 2
+      • Total parameter elements: 43
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: POST https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_outage_event
+    📖 Description: Create a forecast outage event for an asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 10 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - required
+    ✅ time_stamp_tz (string) - required
+    ✅ resolution_time_stamp_tz (string) - required
+    ✅ additional_indo (string) - optional
+    ✅ device_power_setpoint_kw (string) - required
+    ✅ iec_category (integer) - optional
+    ✅ gads_component_code_id (integer) - optional
+    ✅ gads_category (integer) - optional
+    ✅ notes (string) - optional
+  📊 Total query parameters: 10
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 31 object property labels
+    ✅ Built 200 schema with 31 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ device_id (integer)
+          └─ additional_info (string)
+          └─ ... and 7 more
+        • data (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ device_id (integer)
+          └─ ... and 16 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/postforecastoutageevent
+Query parameters found: 10
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID for this outage event
+  • device_id (integer) 🔴 REQUIRED
+    Device ID(s) associated with the event
+  • time_stamp_tz (string) 🔴 REQUIRED
+    Timestamp for the event (Asset timezone)
+  • resolution_time_stamp_tz (string) 🔴 REQUIRED
+    Resolution timestamp for the event (Asset timezone)
+  • additional_indo (string) 🟢 OPTIONAL
+    Additional information for the event
+  • device_power_setpoint_kw (string) 🔴 REQUIRED
+    Power setpoint in kW for the device
+  • iec_category (integer) 🟢 OPTIONAL
+    IEC category ID for the event
+  • gads_component_code_id (integer) 🟢 OPTIONAL
+    GADS component code ID for the event
+  • gads_category (integer) 🟢 OPTIONAL
+    GADS category ID for the event
+  • notes (string) 🟢 OPTIONAL
+    Additional notes for the event
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_postforecastoutageevent.json
+  ✅ Saved: proper_extractions_all/reference_postforecastoutageevent.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_postforecastoutageevent.json
+
+[22/54] /reference/actualvsbudgeted-1
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/actualvsbudgeted-1
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/actualvsbudgeted-1
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 4
+      • Object properties: 7
+      • Response spans: 2
+      • Total parameter elements: 13
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/actual_vs_budgeted?data_type=production
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 4 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ data_type (string) - required
+  📊 Total query parameters: 4
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 7 object property labels
+    ✅ Built 200 schema with 7 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+        • data (array)
+          └─ Date (string)
+          └─ Projected Value (number)
+          └─ Actual Value (number)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/actualvsbudgeted-1
+Query parameters found: 4
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date in YYYY-MM format
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date in YYYY-MM format
+  • data_type (string) 🔴 REQUIRED
+    Defaults to production. Provide data type to be returned
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_actualvsbudgeted_1.json
+  ✅ Saved: proper_extractions_all/reference_actualvsbudgeted_1.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_actualvsbudgeted_1.json
+
+[23/54] /reference/predictcomponents
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/predictcomponents
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/predictcomponents
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 2/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 3/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 4/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 5/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 6/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 7/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 8/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 2
+      • Total parameter elements: 9
+    ⚠️ ReadMe.io content may not be fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/predict_components
+    📖 Description: Get a list of subscribed predict components for a ...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 6 object property labels
+    ✅ Built 200 schema with 6 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+        • data (array)
+          └─ component_id (integer)
+          └─ component (string)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/predictcomponents
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_predictcomponents.json
+  ✅ Saved: proper_extractions_all/reference_predictcomponents.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_predictcomponents.json
+
+[24/54] /reference/healthalerts
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/healthalerts
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/healthalerts
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 4
+      • Object properties: 22
+      • Response spans: 3
+      • Total parameter elements: 29
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/health_alerts
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 4 query parameter labels
+    ✅ asset_id (integer) - optional
+    ✅ asset_type (string) - optional
+    ✅ start_date (string) - optional
+    ✅ end_date (string) - optional
+  📊 Total query parameters: 4
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 22 object property labels
+    ✅ Built 200 schema with 23 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ status (string)
+          └─ start_date (string)
+          └─ end_date (string)
+          └─ ... and 1 more
+        • data (array)
+          └─ asset (string)
+          └─ device (string)
+          └─ component (string)
+          └─ ... and 14 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/healthalerts
+Query parameters found: 4
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🟢 OPTIONAL
+    Notifications for a specific Asset ID
+  • asset_type (string) 🟢 OPTIONAL
+    Get health alerts for specific asset type
+  • start_date (string) 🟢 OPTIONAL
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🟢 OPTIONAL
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_healthalerts.json
+  ✅ Saved: proper_extractions_all/reference_healthalerts.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_healthalerts.json
+
+[25/54] /reference/healthscores-1
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/healthscores-1
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/healthscores-1
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 9
+      • Response spans: 3
+      • Total parameter elements: 13
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/health_scores
+    📖 Description: Get health score data for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 9 object property labels
+    ✅ Built 200 schema with 10 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ asset_id (integer)
+          └─ number_of_devices (integer)
+        • data (array)
+          └─ device (string)
+          └─ health_scores (array)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/healthscores-1
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_healthscores_1.json
+  ✅ Saved: proper_extractions_all/reference_healthscores_1.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_healthscores_1.json
+
+[26/54] /reference/historicalhealthscores
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/historicalhealthscores
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/historicalhealthscores
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 13
+      • Response spans: 3
+      • Total parameter elements: 21
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historical_health_scores
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (string) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ component_id (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 14 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ start_date (string)
+          └─ ... and 4 more
+        • data (array)
+          └─ date (string)
+          └─ device_id (integer)
+          └─ component_id (integer)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/historicalhealthscores
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • device_id (string) 🔴 REQUIRED
+    Filter by devices (comma separated list of device_ids)
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported format is YYYY-MM-DD.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported format is YYYY-MM-DD.
+  • component_id (integer) 🟢 OPTIONAL
+    Filter by predict component id
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_historicalhealthscores.json
+  ✅ Saved: proper_extractions_all/reference_historicalhealthscores.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_historicalhealthscores.json
+
+[27/54] /reference/actualvspredicted
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/actualvspredicted
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/actualvspredicted
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 19
+      • Response spans: 3
+      • Total parameter elements: 27
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/actual_vs_predicted
+    📖 Description: Actual vs. Predicted Values...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ component_id (integer) - required
+    ✅ device_id (string) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 19 object property labels
+    ✅ Built 200 schema with 18 properties
+    ✅ Built 400/401 schemas with 2 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ component_id (integer)
+          └─ ... and 7 more
+        • data (array)
+          └─ device_id (integer)
+          └─ device (integer)
+          └─ timestamp (string)
+          └─ ... and 3 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ error_value (number)
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ error_value (number)
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/actualvspredicted
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • component_id (integer) 🔴 REQUIRED
+    Filter by predict component id
+  • device_id (string) 🔴 REQUIRED
+    Filter by devices (comma separated list of device_ids)
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported format is YYYY-MM-DD.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported format is YYYY-MM-DD.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 2 properties
+  Status 401: 2 properties
+
+📄 Results saved to: proper_extraction__reference_actualvspredicted.json
+  ✅ Saved: proper_extractions_all/reference_actualvspredicted.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_actualvspredicted.json
+
+[28/54] /reference/componentconfigurations
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/componentconfigurations
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/componentconfigurations
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 6
+      • Response spans: 5
+      • Total parameter elements: 12
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_configurations
+    📖 Description: Get device components configurations for a given a...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 6 object property labels
+    ✅ Built 200 schema with 11 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device_hierarchy (array)
+          └─ ... and 1 more
+        • data (array)
+          └─ device_hierarchy (array)
+          └─ component_attributes (object)
+          └─ component_attributes_object (object)
+          └─ ... and 1 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/componentconfigurations
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_componentconfigurations.json
+  ✅ Saved: proper_extractions_all/reference_componentconfigurations.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_componentconfigurations.json
+
+[29/54] /reference/componentinventory
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/componentinventory
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/componentinventory
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 29
+      • Response spans: 3
+      • Total parameter elements: 37
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_inventory
+    📖 Description: Get a list of all device components inventory for ...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - optional
+    ✅ component_name (string) - optional
+    ✅ tracking_inventory_id (integer) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 29 object property labels
+    ✅ Built 200 schema with 31 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device_id (integer)
+          └─ ... and 5 more
+        • data (array)
+          └─ tracking_inventory_id (integer)
+          └─ device_id (integer)
+          └─ device (string)
+          └─ ... and 18 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/componentinventory
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID
+  • component_name (string) 🟢 OPTIONAL
+    Filter for specific component name
+  • tracking_inventory_id (integer) 🟢 OPTIONAL
+    Filter for specific Tracking Inventory ID
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_componentinventory.json
+  ✅ Saved: proper_extractions_all/reference_componentinventory.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_componentinventory.json
+
+[30/54] /reference/componentinventoryhistory
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/componentinventoryhistory
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/componentinventoryhistory
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 31
+      • Response spans: 3
+      • Total parameter elements: 39
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_inventory_history
+    📖 Description: Get a history of device components inventory for a...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - optional
+    ✅ component_name (string) - optional
+    ✅ tracking_inventory_id (integer) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 31 object property labels
+    ✅ Built 200 schema with 33 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device_id (integer)
+          └─ ... and 6 more
+        • data (array)
+          └─ tracking_inventory_id (integer)
+          └─ device_id (integer)
+          └─ device (string)
+          └─ ... and 19 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/componentinventoryhistory
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID
+  • component_name (string) 🟢 OPTIONAL
+    Filter for specific component name
+  • tracking_inventory_id (integer) 🟢 OPTIONAL
+    Filter for specific Tracking Inventory ID
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_componentinventoryhistory.json
+  ✅ Saved: proper_extractions_all/reference_componentinventoryhistory.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_componentinventoryhistory.json
+
+[31/54] /reference/componenttickets
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/componenttickets
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/componenttickets
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 43
+      • Response spans: 5
+      • Total parameter elements: 54
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_tickets
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device_id (integer) - optional
+    ✅ component_name (string) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 43 object property labels
+    ✅ Built 200 schema with 47 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device_id (integer)
+          └─ ... and 7 more
+        • data (array)
+          └─ tracking_ticket_id (integer)
+          └─ ticket_number (integer)
+          └─ description (string)
+          └─ ... and 32 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/componenttickets
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported format is YYYY-MM-DD.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported format is YYYY-MM-DD.
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID
+  • component_name (string) 🟢 OPTIONAL
+    Filter for specific component name
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_componenttickets.json
+  ✅ Saved: proper_extractions_all/reference_componenttickets.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_componenttickets.json
+
+[32/54] /reference/postcomponenttickets
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/postcomponenttickets
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/postcomponenttickets
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 8
+      • Response spans: 2
+      • Total parameter elements: 17
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: POST https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_tickets
+    📖 Description: Create a device component ticket....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - required
+    ✅ component_name (string) - required
+    ✅ subject (string) - required
+    ✅ description (string) - optional
+    ✅ notes (string) - optional
+    ✅ assigned_to_user_id (integer) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 8 object property labels
+    ✅ Built 200 schema with 8 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device_id (integer)
+          └─ ... and 2 more
+        • data (array)
+          └─ ticket_number (integer)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/postcomponenttickets
+Query parameters found: 7
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID for this ticket
+  • device_id (integer) 🔴 REQUIRED
+    Device ID for this ticket
+  • component_name (string) 🔴 REQUIRED
+    Component Name for this ticket
+  • subject (string) 🔴 REQUIRED
+    Set Subject for this ticket
+  • description (string) 🟢 OPTIONAL
+    Set Description for this ticket
+  • notes (string) 🟢 OPTIONAL
+    Set Notes for this ticket
+  • assigned_to_user_id (integer) 🟢 OPTIONAL
+    Assign this ticket to User ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_postcomponenttickets.json
+  ✅ Saved: proper_extractions_all/reference_postcomponenttickets.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_postcomponenttickets.json
+
+[33/54] /reference/componentticketshistory
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/componentticketshistory
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/componentticketshistory
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 43
+      • Response spans: 5
+      • Total parameter elements: 53
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_tickets_history
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ device_id (integer) - optional
+    ✅ component_name (string) - optional
+    ✅ ticket_number (integer) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 43 object property labels
+    ✅ Built 200 schema with 47 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ tracking_ticket_id (integer)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ ... and 7 more
+        • data (array)
+          └─ ticket_number (integer)
+          └─ ticket_action (string)
+          └─ description (string)
+          └─ ... and 32 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/componentticketshistory
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device ID
+  • component_name (string) 🟢 OPTIONAL
+    Filter for specific component name
+  • ticket_number (integer) 🟢 OPTIONAL
+    Filter for specific Ticket number
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_componentticketshistory.json
+  ✅ Saved: proper_extractions_all/reference_componentticketshistory.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_componentticketshistory.json
+
+[34/54] /reference/dcloss
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/dcloss
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/dcloss
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 10
+      • Response spans: 4
+      • Total parameter elements: 19
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/dc_loss?aggregation=daily
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ device_id (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 4 response span elements
+    🔍 Found 10 object property labels
+    ✅ Built 200 schema with 12 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 4 more
+        • data (array)
+          └─ device (array)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/dcloss
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Defaults to daily. Provide desired aggregation level
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device Id
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_dcloss.json
+  ✅ Saved: proper_extractions_all/reference_dcloss.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_dcloss.json
+
+[35/54] /reference/performanceratio-1
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/performanceratio-1
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/performanceratio-1
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 5
+      • Object properties: 13
+      • Response spans: 3
+      • Total parameter elements: 21
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/performance_ratio?aggregation=daily
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 5 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ device_id (integer) - optional
+  📊 Total query parameters: 5
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 13 object property labels
+    ✅ Built 200 schema with 15 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 5 more
+        • data (array)
+          └─ timestamp (string)
+          └─ performance_ratio (number)
+          └─ corrected_performance_ratio (number)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/performanceratio-1
+Query parameters found: 5
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Defaults to daily. Provide desired aggregation level
+  • device_id (integer) 🟢 OPTIONAL
+    Filter for specific Device Id
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_performanceratio_1.json
+  ✅ Saved: proper_extractions_all/reference_performanceratio_1.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_performanceratio_1.json
+
+[36/54] /reference/powercurve
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/powercurve
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/powercurve
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 4
+      • Object properties: 15
+      • Response spans: 7
+      • Total parameter elements: 26
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/binned_power_curve
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 4 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ device_id (string) - optional
+  📊 Total query parameters: 4
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 7 response span elements
+    🔍 Found 15 object property labels
+    ✅ Built 200 schema with 20 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ timezone (string)
+          └─ timezone_preference (string)
+          └─ ... and 7 more
+        • data (array)
+          └─ default_power_curves (array)
+          └─ binned_power_curves (array)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/powercurve
+Query parameters found: 4
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter for specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • device_id (string) 🟢 OPTIONAL
+    Filter by devices (comma separated device ids)
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_powercurve.json
+  ✅ Saved: proper_extractions_all/reference_powercurve.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_powercurve.json
+
+[37/54] /reference/mappings
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/mappings
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/mappings
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 2
+      • Object properties: 9
+      • Response spans: 3
+      • Total parameter elements: 14
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/data/mappings?mappings_type=device
+    📖 Description: Get field mappings of 5/10 minute (depending on as...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 2 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ mappings_type (string) - optional
+  📊 Total query parameters: 2
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 9 object property labels
+    ✅ Built 200 schema with 11 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ mappings_type (string)
+          └─ units (object)
+          └─ ... and 1 more
+        • data (array)
+          └─ display_name (string)
+          └─ original_name (string)
+          └─ elastic_name (string)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/mappings
+Query parameters found: 2
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Asset ID of requested mappings
+  • mappings_type (string) 🟢 OPTIONAL
+    Defaults to device. Which type of fields mappings to retrieve. Default is device field mappings type.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_mappings.json
+  ✅ Saved: proper_extractions_all/reference_mappings.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_mappings.json
+
+[38/54] /reference/query
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/query
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/query
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 8
+      • Object properties: 17
+      • Response spans: 5
+      • Total parameter elements: 30
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/data/query?data_type=device&aggregation=average&interval=none
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 8 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ data_type (string) - optional
+    ✅ aggregation (string) - required
+    ✅ interval (string) - required
+    ✅ device_id (string) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 8
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 17 object property labels
+    ✅ Built 200 schema with 20 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ start_date (string)
+          └─ end_date (string)
+          └─ ... and 10 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ device (string)
+          └─ ... and 2 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/query
+Query parameters found: 8
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • data_type (string) 🟢 OPTIONAL
+    Defaults to device. Which type of data to retrieve. Default is device data type.
+  • aggregation (string) 🔴 REQUIRED
+    Which aggregation type to apply
+  • interval (string) 🔴 REQUIRED
+    none hourly daily
+  • device_id (string) 🔴 REQUIRED
+    Can be a single device Id or a list of comma separated device Ids.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_query.json
+  ✅ Saved: proper_extractions_all/reference_query.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_query.json
+
+[39/54] /reference/rawmappings
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawmappings
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawmappings
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 10
+      • Response spans: 3
+      • Total parameter elements: 14
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historian/historian_mappings
+    📖 Description: Retrieves raw field mappings for a given asset....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - required
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 10 object property labels
+    ✅ Built 200 schema with 12 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ units (object)
+          └─ object (object)
+        • data (array)
+          └─ signal (string)
+          └─ data_type (string)
+          └─ measurement_type (string)
+          └─ ... and 4 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawmappings
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawmappings.json
+  ✅ Saved: proper_extractions_all/reference_rawmappings.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawmappings.json
+
+[40/54] /reference/rawquerysite
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawquerysite
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawquerysite
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 18
+      • Response spans: 4
+      • Total parameter elements: 28
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historian/historian_site_aggregation?aggregation=min&interval=minute
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ interval (string) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 4 response span elements
+    🔍 Found 18 object property labels
+    ✅ Built 200 schema with 20 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device (string)
+          └─ ... and 11 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ field (string)
+          └─ ... and 1 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawquerysite
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Aggregated data for a specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Which aggregation type to apply
+  • interval (string) 🔴 REQUIRED
+    Which interval to apply
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawquerysite.json
+  ✅ Saved: proper_extractions_all/reference_rawquerysite.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawquerysite.json
+
+[41/54] /reference/rawquerydevice
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawquerydevice
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawquerydevice
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 18
+      • Response spans: 4
+      • Total parameter elements: 29
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historian/historian_device_aggregation?aggregation=min&interval=minute
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ aggregation (string) - required
+    ✅ interval (string) - required
+    ✅ device_id (integer) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 4 response span elements
+    🔍 Found 18 object property labels
+    ✅ Built 200 schema with 20 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device (string)
+          └─ ... and 11 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ field (string)
+          └─ ... and 1 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawquerydevice
+Query parameters found: 7
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Aggregated data for a specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • aggregation (string) 🔴 REQUIRED
+    Which aggregation type to apply
+  • interval (string) 🔴 REQUIRED
+    Which interval to apply
+  • device_id (integer) 🔴 REQUIRED
+    Device Id
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawquerydevice.json
+  ✅ Saved: proper_extractions_all/reference_rawquerydevice.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawquerydevice.json
+
+[42/54] /reference/rawquery
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawquery
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawquery
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 15
+      • Response spans: 3
+      • Total parameter elements: 24
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historian/historian_raw_data
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ field (string) - required
+    ✅ device_id (integer) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 3 response span elements
+    🔍 Found 15 object property labels
+    ✅ Built 200 schema with 17 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset_id (integer)
+          └─ asset (string)
+          └─ device (string)
+          └─ ... and 8 more
+        • data (array)
+          └─ timestamp (string)
+          └─ timestamp_tz (string)
+          └─ field (string)
+          └─ ... and 1 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawquery
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Aggregated data for a specific Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • field (string) 🔴 REQUIRED
+    Which field mapping to retrieve
+  • device_id (integer) 🔴 REQUIRED
+    Device Id
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawquery.json
+  ✅ Saved: proper_extractions_all/reference_rawquery.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawquery.json
+
+[43/54] /reference/getnotifications
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/getnotifications
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/getnotifications
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 18
+      • Response spans: 5
+      • Total parameter elements: 29
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/notifications
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - optional
+    ✅ end_date (string) - optional
+    ✅ page (integer) - optional
+    ✅ subject (string) - optional
+    ✅ impacted_device_id (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 18 object property labels
+    ✅ Built 200 schema with 19 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ status (string)
+          └─ start_date (string)
+          └─ end_date (string)
+          └─ ... and 5 more
+        • data (array)
+          └─ asset (string)
+          └─ status (string)
+          └─ notification_rule (string)
+          └─ ... and 6 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/getnotifications
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Notifications for a specific Asset ID
+  • start_date (string) 🟢 OPTIONAL
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🟢 OPTIONAL
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+  • subject (string) 🟢 OPTIONAL
+    Filter for notification subject. It is case sensitive.
+  • impacted_device_id (integer) 🟢 OPTIONAL
+    Filter for specific impacted device Id.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_getnotifications.json
+  ✅ Saved: proper_extractions_all/reference_getnotifications.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_getnotifications.json
+
+[44/54] /reference/putnotifications
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/putnotifications
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/putnotifications
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 3
+      • Object properties: 8
+      • Response spans: 2
+      • Total parameter elements: 13
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: PUT https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/notifications
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 3 query parameter labels
+    ✅ notification_id (integer) - required
+    ✅ status (string) - optional
+    ✅ notes (string) - optional
+  📊 Total query parameters: 3
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 2 response span elements
+    🔍 Found 8 object property labels
+    ✅ Built 200 schema with 8 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ notification_id (integer)
+          └─ notification_rule (string)
+          └─ updated_at_timestamp (string)
+        • data (array)
+          └─ action (string)
+          └─ status (string)
+          └─ notes (string)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/putnotifications
+Query parameters found: 3
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • notification_id (integer) 🔴 REQUIRED
+    Provide notification ID to update.
+  • status (string) 🟢 OPTIONAL
+    Set the status of the notification.
+  • notes (string) 🟢 OPTIONAL
+    Add notes to a notification.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_putnotifications.json
+  ✅ Saved: proper_extractions_all/reference_putnotifications.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_putnotifications.json
+
+[45/54] /reference/postnotifications
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/postnotifications
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/postnotifications
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 12
+      • Object properties: 19
+      • Response spans: 5
+      • Total parameter elements: 36
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: POST https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/notifications?status=active&notification_rule_id=1
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 12 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ status (string) - required
+    ✅ subject (string) - required
+    ✅ message (string) - required
+    ✅ impacted_device_ids (string) - required
+    ✅ user_email (string) - required
+    ✅ notes (string) - optional
+    ✅ last_active_timestamp (string) - optional
+    ✅ notification_rule_id (integer) - optional
+    ✅ send_email (string) - optional
+    ✅ send_sms (string) - optional
+    ✅ additional_data (string) - optional
+  📊 Total query parameters: 12
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 5 response span elements
+    🔍 Found 19 object property labels
+    ✅ Built 200 schema with 21 properties
+    ✅ Built 400/401 schemas with 2 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ status (string)
+          └─ notes (string)
+          └─ user_email (string)
+          └─ ... and 3 more
+        • data (array)
+          └─ notification_id (integer)
+          └─ asset (string)
+          └─ status (string)
+          └─ ... and 10 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/postnotifications
+Query parameters found: 12
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    An asset ID to associate with this notification.
+  • status (string) 🔴 REQUIRED
+    Defaults to active. Set the status of the notification.
+  • subject (string) 🔴 REQUIRED
+    The subject of the notification.
+  • message (string) 🔴 REQUIRED
+    A message to include with the notification.
+  • impacted_device_ids (string) 🔴 REQUIRED
+    Provide device Id or comma separated list of device Ids impacted by this notification.
+  • user_email (string) 🔴 REQUIRED
+    The email of a user associated with this account that will be used as the creator of the notification.
+  • notes (string) 🟢 OPTIONAL
+    Add notes to a notification.
+  • last_active_timestamp (string) 🟢 OPTIONAL
+    A timestamp for when this notification was last active.Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • notification_rule_id (integer) 🟢 OPTIONAL
+    Defaults to 1. Notification rule id if generating notification for a specific rule. Its default value is 1.
+  • send_email (string) 🟢 OPTIONAL
+    Add comma-separated list of emails to send notification email to.
+  • send_sms (string) 🟢 OPTIONAL
+    Add comma-separated list of phone numbers to send notification sms to.
+  • additional_data (string) 🟢 OPTIONAL
+    Add Json of additional data to a notification.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 2 properties
+  Status 401: 2 properties
+
+📄 Results saved to: proper_extraction__reference_postnotifications.json
+  ✅ Saved: proper_extractions_all/reference_postnotifications.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_postnotifications.json
+
+[46/54] /reference/notificationrules
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/notificationrules
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/notificationrules
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 1
+      • Object properties: 11
+      • Response spans: 8
+      • Total parameter elements: 20
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/notification_rules
+    📖 Description: Get notification rules for a given asset ID....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 1 query parameter labels
+    ✅ asset_id (integer) - optional
+  📊 Total query parameters: 1
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 8 response span elements
+    🔍 Found 11 object property labels
+    ✅ Built 200 schema with 15 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • data (array)
+          └─ notification_rule_id (integer)
+          └─ asset (string)
+          └─ name (string)
+          └─ ... and 11 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • data (array)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/notificationrules
+Query parameters found: 1
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🟢 OPTIONAL
+    Filter by Asset ID
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 1 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_notificationrules.json
+  ✅ Saved: proper_extractions_all/reference_notificationrules.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_notificationrules.json
+
+[47/54] /reference/plants
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/plants
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/plants
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 0
+      • Object properties: 10
+      • Response spans: 1
+      • Total parameter elements: 11
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/Plant
+    📖 Description: Retrieves all plants visible to the authenticated ...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 0 query parameter labels
+  📊 Total query parameters: 0
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 1 response span elements
+    🔍 Found 10 object property labels
+    ✅ Built 200 schema with 10 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        •  (object)
+          └─ _alertIcon (string)
+        • ElementCount (object)
+          └─ ElementCount (integer)
+        • Id (object)
+          └─ Id (integer)
+        • Name (object)
+          └─ Name (string)
+        • DatasourcesCount (object)
+          └─ DatasourcesCount (integer)
+        • AlarmColor (object)
+          └─ AlarmColor (integer)
+        • UniqueID (object)
+          └─ UniqueID (string)
+        • Parameters (array)
+          └─ Key (string)
+          └─ Value (string)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/plants
+Query parameters found: 0
+Response schemas found: 3
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 8 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_plants.json
+  ✅ Saved: proper_extractions_all/reference_plants.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_plants.json
+
+[48/54] /reference/plant
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/plant
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/plant
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 0
+      • Object properties: 10
+      • Response spans: 1
+      • Total parameter elements: 11
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/Plant/plantId
+    📖 Description: Retrieves plant with its ID number....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 0 query parameter labels
+  📊 Total query parameters: 0
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 1 response span elements
+    🔍 Found 10 object property labels
+    ✅ Built 200 schema with 10 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        •  (object)
+          └─ _alertIcon (string)
+        • ElementCount (object)
+          └─ ElementCount (integer)
+        • Id (object)
+          └─ Id (integer)
+        • Name (object)
+          └─ Name (string)
+        • DatasourcesCount (object)
+          └─ DatasourcesCount (integer)
+        • AlarmColor (object)
+          └─ AlarmColor (integer)
+        • UniqueID (object)
+          └─ UniqueID (string)
+        • Parameters (array)
+          └─ Key (string)
+          └─ Value (string)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/plant
+Query parameters found: 0
+Response schemas found: 3
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 8 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_plant.json
+  ✅ Saved: proper_extractions_all/reference_plant.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_plant.json
+
+[49/54] /reference/elements
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/elements
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/elements
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 2/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 3/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 4/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 5/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 6/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 7/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 8/8)
+      • Query parameters: 0
+      • Object properties: 8
+      • Response spans: 0
+      • Total parameter elements: 8
+    ⚠️ ReadMe.io content may not be fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/Plant/plantId/Element
+    📖 Description: Retrieves a plant's elements from a given plant ID...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 0 query parameter labels
+  📊 Total query parameters: 0
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 0 response span elements
+    🔍 Found 8 object property labels
+    ✅ Built 200 schema with 6 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • Identifier (object)
+          └─ Identifier (integer)
+        • UniqueID (object)
+          └─ UniqueID (string)
+        • name (object)
+          └─ name (string)
+        • Type (object)
+          └─ Type (number)
+        • TypeString (object)
+          └─ TypeString (string)
+        • ParentId (object)
+          └─ ParentId (integer)
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/elements
+Query parameters found: 0
+Response schemas found: 3
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 6 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_elements.json
+  ✅ Saved: proper_extractions_all/reference_elements.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_elements.json
+
+[50/54] /reference/gpmalarms
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/gpmalarms
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/gpmalarms
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 10
+      • Object properties: 2
+      • Response spans: 4
+      • Total parameter elements: 16
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/Alarms
+    📖 Description: Retrieves alarms visible to the authenticated user...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 10 query parameter labels
+    ✅ plantId (integer) - required
+    ✅ startDate (string) - optional
+    ✅ endDate (string) - optional
+    ✅ elementId (string) - optional
+    ✅ fault_code (integer) - optional
+    ✅ category (string) - optional
+    ✅ fault_type (string) - optional
+    ✅ available (boolean) - optional
+    ✅ fault_order (boolean) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 10
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 4 response span elements
+    🔍 Found 2 object property labels
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 2
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/gpmalarms
+Query parameters found: 10
+Response schemas found: 2
+
+📝 QUERY PARAMETERS:
+  • plantId (integer) 🔴 REQUIRED
+    Filter for specific Plant ID
+  • startDate (string) 🟢 OPTIONAL
+    Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • endDate (string) 🟢 OPTIONAL
+    Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • elementId (string) 🟢 OPTIONAL
+    Filter by elements (comma separated list of elementIds)
+  • fault_code (integer) 🟢 OPTIONAL
+    Filter by fault code
+  • category (string) 🟢 OPTIONAL
+    Filter by fault category
+  • fault_type (string) 🟢 OPTIONAL
+    Filter by fault type (comma separated list)
+  • available (boolean) 🟢 OPTIONAL
+    Filter by fault availability
+  • fault_order (boolean) 🟢 OPTIONAL
+    Filter to show secondary faults (default is false)
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_gpmalarms.json
+  ✅ Saved: proper_extractions_all/reference_gpmalarms.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_gpmalarms.json
+
+[51/54] /reference/rawmappingsgpm
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawmappingsgpm
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawmappingsgpm
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 0
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 2
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 2/8)
+      • Query parameters: 0
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 2
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 3/8)
+      • Query parameters: 0
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 2
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 4/8)
+      • Query parameters: 0
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 2
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 5/8)
+      ❌ Error checking content: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+0   chromedriver                        0x0000000104cb4c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000104cacb20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001047f50c8 cxxbridge1$string$len + 90536
+3   chromedriver                        0x00000001047df064 cxxbridge1$string$len + 324
+4   chromedriver                        0x00000001047dd86c chromedriver + 202860
+5   chromedriver                        0x00000001047de60c chromedriver + 206348
+6   chromedriver                        0x00000001047f9188 cxxbridge1$string$len + 107112
+7   chromedriver                        0x00000001047f999c cxxbridge1$string$len + 109180
+8   chromedriver                        0x00000001047fd0c4 cxxbridge1$string$len + 123300
+9   chromedriver                        0x00000001047fd16c cxxbridge1$string$len + 123468
+10  chromedriver                        0x000000010483c214 cxxbridge1$string$len + 381684
+11  chromedriver                        0x000000010487d99c cxxbridge1$string$len + 649852
+12  chromedriver                        0x0000000104830934 cxxbridge1$string$len + 334356
+13  chromedriver                        0x0000000104c7788c cxxbridge1$str$ptr + 2496880
+14  chromedriver                        0x0000000104c7aab8 cxxbridge1$str$ptr + 2509724
+15  chromedriver                        0x0000000104c58510 cxxbridge1$str$ptr + 2369012
+16  chromedriver                        0x0000000104c7b360 cxxbridge1$str$ptr + 2511940
+17  chromedriver                        0x0000000104c49610 cxxbridge1$str$ptr + 2307828
+18  chromedriver                        0x0000000104c9b230 cxxbridge1$str$ptr + 2642708
+19  chromedriver                        0x0000000104c9b3bc cxxbridge1$str$ptr + 2643104
+20  chromedriver                        0x0000000104cac76c cxxbridge1$str$ptr + 2713680
+21  libsystem_pthread.dylib             0x0000000187abec0c _pthread_start + 136
+22  libsystem_pthread.dylib             0x0000000187ab9b80 thread_start + 8
+
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 6/8)
+      ❌ Error checking content: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+0   chromedriver                        0x0000000104cb4c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000104cacb20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001047f4f3c cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010482fdf8 cxxbridge1$string$len + 331480
+4   chromedriver                        0x00000001048583e4 cxxbridge1$string$len + 496836
+5   chromedriver                        0x00000001048576ec cxxbridge1$string$len + 493516
+6   chromedriver                        0x00000001047c419c chromedriver + 98716
+7   chromedriver                        0x0000000104c7788c cxxbridge1$str$ptr + 2496880
+8   chromedriver                        0x0000000104c7aab8 cxxbridge1$str$ptr + 2509724
+9   chromedriver                        0x0000000104c58510 cxxbridge1$str$ptr + 2369012
+10  chromedriver                        0x0000000104c7b360 cxxbridge1$str$ptr + 2511940
+11  chromedriver                        0x0000000104c49610 cxxbridge1$str$ptr + 2307828
+12  chromedriver                        0x00000001047c2434 chromedriver + 91188
+13  dyld                                0x000000018771eb98 start + 6076
+
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 7/8)
+      ❌ Error checking content: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+0   chromedriver                        0x0000000104cb4c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000104cacb20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001047f4f3c cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010482fdf8 cxxbridge1$string$len + 331480
+4   chromedriver                        0x00000001048583e4 cxxbridge1$string$len + 496836
+5   chromedriver                        0x00000001048576ec cxxbridge1$string$len + 493516
+6   chromedriver                        0x00000001047c419c chromedriver + 98716
+7   chromedriver                        0x0000000104c7788c cxxbridge1$str$ptr + 2496880
+8   chromedriver                        0x0000000104c7aab8 cxxbridge1$str$ptr + 2509724
+9   chromedriver                        0x0000000104c58510 cxxbridge1$str$ptr + 2369012
+10  chromedriver                        0x0000000104c7b360 cxxbridge1$str$ptr + 2511940
+11  chromedriver                        0x0000000104c49610 cxxbridge1$str$ptr + 2307828
+12  chromedriver                        0x00000001047c2434 chromedriver + 91188
+13  dyld                                0x000000018771eb98 start + 6076
+
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 8/8)
+      ❌ Error checking content: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+0   chromedriver                        0x0000000104cb4c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000104cacb20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001047f4f3c cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010482fdf8 cxxbridge1$string$len + 331480
+4   chromedriver                        0x00000001048583e4 cxxbridge1$string$len + 496836
+5   chromedriver                        0x00000001048576ec cxxbridge1$string$len + 493516
+6   chromedriver                        0x00000001047c419c chromedriver + 98716
+7   chromedriver                        0x0000000104c7788c cxxbridge1$str$ptr + 2496880
+8   chromedriver                        0x0000000104c7aab8 cxxbridge1$str$ptr + 2509724
+9   chromedriver                        0x0000000104c58510 cxxbridge1$str$ptr + 2369012
+10  chromedriver                        0x0000000104c7b360 cxxbridge1$str$ptr + 2511940
+11  chromedriver                        0x0000000104c49610 cxxbridge1$str$ptr + 2307828
+12  chromedriver                        0x00000001047c2434 chromedriver + 91188
+13  dyld                                0x000000018771eb98 start + 6076
+
+    ⚠️ ReadMe.io content may not be fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+❌ Extraction failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+0   chromedriver                        0x0000000104cb4c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000104cacb20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001047f4f3c cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010482fdf8 cxxbridge1$string$len + 331480
+4   chromedriver                        0x00000001048583e4 cxxbridge1$string$len + 496836
+5   chromedriver                        0x00000001048576ec cxxbridge1$string$len + 493516
+6   chromedriver                        0x00000001047c419c chromedriver + 98716
+7   chromedriver                        0x0000000104c7788c cxxbridge1$str$ptr + 2496880
+8   chromedriver                        0x0000000104c7aab8 cxxbridge1$str$ptr + 2509724
+9   chromedriver                        0x0000000104c58510 cxxbridge1$str$ptr + 2369012
+10  chromedriver                        0x0000000104c7b360 cxxbridge1$str$ptr + 2511940
+11  chromedriver                        0x0000000104c49610 cxxbridge1$str$ptr + 2307828
+12  chromedriver                        0x00000001047c2434 chromedriver + 91188
+13  dyld                                0x000000018771eb98 start + 6076
+
+  ❌ No result returned
+
+[52/54] /reference/rawquerygpm
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawquerygpm
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawquerygpm
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 2/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 3/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 4/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 5/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 6/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 7/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⏳ Waiting 5 more seconds...
+    🔍 Checking ReadMe.io content (attempt 8/8)
+      • Query parameters: 7
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 9
+    ⚠️ ReadMe.io content may not be fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/DataList?grouping=minute
+    📖 Description: Returns datasource's values given a date range....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 7 query parameter labels
+    ✅ dataSourceId (integer) - required
+    ✅ startDate (number) - required
+    ✅ endDate (number) - required
+    ✅ aggregationType (integer) - required
+    ✅ grouping (string) - required
+    ✅ elementId (integer) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 7
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 0 response span elements
+    🔍 Found 2 object property labels
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 2
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawquerygpm
+Query parameters found: 7
+Response schemas found: 2
+
+📝 QUERY PARAMETERS:
+  • dataSourceId (integer) 🔴 REQUIRED
+    The dataSource's database id.
+  • startDate (number) 🔴 REQUIRED
+    Start time of the query in Unix Timestamp format.
+  • endDate (number) 🔴 REQUIRED
+    End time of the query in Unix Timestamp format
+  • aggregationType (integer) 🔴 REQUIRED
+    Operation to apply for the grouping. Sum without zeros = 0, Average = 1, Maximum = 6, Minimum = 7, Count = 9, Sum with zeros = 11
+  • grouping (string) 🔴 REQUIRED
+    minute hour day week month quarter year
+  • elementId (integer) 🟢 OPTIONAL
+    Element Id if element level aggregation is needed. Plant level aggregation is returned if not passed.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawquerygpm.json
+  ✅ Saved: proper_extractions_all/reference_rawquerygpm.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawquerygpm.json
+
+[53/54] /reference/rawquerygpmv2
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/rawquerygpmv2
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/rawquerygpmv2
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 8
+      • Object properties: 2
+      • Response spans: 0
+      • Total parameter elements: 10
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/DataList/v2?grouping=minute
+    📖 Description: Shows the value information of the selected monito...
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 8 query parameter labels
+    ✅ dataSourceIds (string) - required
+    ✅ startDate (string) - required
+    ✅ endDate (string) - required
+    ✅ grouping (string) - required
+    ✅ granularity (integer) - optional
+    ✅ aggregationType (integer) - required
+    ✅ elementId (integer) - optional
+    ✅ page (integer) - optional
+  📊 Total query parameters: 8
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 0 response span elements
+    🔍 Found 2 object property labels
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 2
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/rawquerygpmv2
+Query parameters found: 8
+Response schemas found: 2
+
+📝 QUERY PARAMETERS:
+  • dataSourceIds (string) 🔴 REQUIRED
+    Valid dataSource ids separated by commas. Limit of 10 data source ids per request.
+  • startDate (string) 🔴 REQUIRED
+    Start DateTime of the query in ISO 8601 format.
+  • endDate (string) 🔴 REQUIRED
+    End DateTime of the query in ISO 8601 format.
+  • grouping (string) 🔴 REQUIRED
+    Which interval to apply. Note: Duration limit for month, week, and day level aggregation is 1 month. Duration limit for minute level aggregation is 1 week.
+  • granularity (integer) 🟢 OPTIONAL
+    granularityintegerGranularity of the given grouping method. It should be 1-60 for minute, 1-23 for hour, 1-31 for days. Granularity is ignored for week, month, quarter and year. Note: If the granularity is not within the specified limits, the call will fail.
+  • aggregationType (integer) 🔴 REQUIRED
+    Operation to apply for the grouping. Sum without zeros = 0, Average = 1, Maximum = 6, Minimum = 7, Count = 9, Sum with zeros = 11
+  • elementId (integer) 🟢 OPTIONAL
+    Element Id if element level aggregation is needed. Plant level aggregation is returned if not passed.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_rawquerygpmv2.json
+  ✅ Saved: proper_extractions_all/reference_rawquerygpmv2.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_rawquerygpmv2.json
+
+[54/54] /reference/querypfs
+🎯 PROPER README.IO EXTRACTOR
+Target endpoint: /reference/querypfs
+============================================================
+🔧 Setting up WebDriver (headless=True)
+✅ WebDriver started successfully
+🔗 Setting up authenticated session
+✅ Session established
+🎯 Navigating to: https://docs.apm.sparkcognition.com/reference/querypfs
+⏳ Waiting for ReadMe.io content to render...
+    🔍 Checking ReadMe.io content (attempt 1/8)
+      • Query parameters: 6
+      • Object properties: 16
+      • Response spans: 7
+      • Total parameter elements: 29
+    ✅ ReadMe.io content appears fully loaded
+✅ Successfully navigated to target endpoint
+🔍 PROPER README.IO EXTRACTION
+Using stable attributes, avoiding hashed CSS classes
+  📖 Extracting Endpoint Metadata
+    📖 Title: Avathon APM API
+    📖 Method: GET https://sc-st-renewables-prod.apm.sparkcognition.com/v2/pfs/api/data/query?data_type=device
+    📖 Description: The URL for this request expired after 30 days....
+  📋 Extracting Query Parameters (using for='query-*' pattern)
+    🔍 Found 6 query parameter labels
+    ✅ asset_id (integer) - required
+    ✅ start_date (string) - required
+    ✅ end_date (string) - required
+    ✅ data_type (string) - optional
+    ✅ device_id (string) - required
+    ✅ page (integer) - optional
+  📊 Total query parameters: 6
+  📊 Extracting Response Schemas (using stable DOM patterns)
+    🔍 Found 7 response span elements
+    🔍 Found 16 object property labels
+    ✅ Built 200 schema with 21 properties
+    ✅ Built 400/401 schemas with 1 properties
+    📄 Schema 200:
+      📄 Schema structure:
+        • query (array)
+          └─ asset (string)
+          └─ start_date (string)
+          └─ end_date (string)
+          └─ ... and 8 more
+        • data (array)
+          └─ id (integer)
+          └─ interval (string)
+          └─ startTime (string)
+          └─ ... and 4 more
+    📄 Schema 400:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+    📄 Schema 401:
+      📄 Schema structure:
+        • message (object)
+          └─ message (string)
+  📊 Total response schemas: 3
+
+============================================================
+📊 PROPER EXTRACTION RESULTS
+============================================================
+Endpoint: /reference/querypfs
+Query parameters found: 6
+Response schemas found: 3
+
+📝 QUERY PARAMETERS:
+  • asset_id (integer) 🔴 REQUIRED
+    Filter by Asset ID
+  • start_date (string) 🔴 REQUIRED
+    Date to begin the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • end_date (string) 🔴 REQUIRED
+    Date to end the query. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.
+  • data_type (string) 🟢 OPTIONAL
+    Defaults to device. Which type of data to retrieve. Default is device data type.
+  • device_id (string) 🔴 REQUIRED
+    Can be a single device Id or a list of comma separated device Ids.
+  • page (integer) 🟢 OPTIONAL
+    The page of results to retrieve.
+
+📊 RESPONSE SCHEMAS:
+  Status 200: 2 properties
+  Status 400: 1 properties
+  Status 401: 1 properties
+
+📄 Results saved to: proper_extraction__reference_querypfs.json
+  ✅ Saved: proper_extractions_all/reference_querypfs.json
+  ✨ Refined in-place
+  🧹 Removed legacy file: proper_extraction__reference_querypfs.json
+
+🎉 Batch complete
+  ✅ Successes: 53
+  ❌ Failures : 1
+  📁 Output   : /Users/bhasi/Documents/GitHub/avathon/proper_extractions_all

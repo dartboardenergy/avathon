@@ -1,0 +1,137 @@
+{
+  "endpoint": "/reference/postcomponenttickets",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "POST",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_tickets",
+    "description": "Create a device component ticket."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Asset ID for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": true,
+      "description": "Device ID for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "component_name",
+      "type": "string",
+      "required": true,
+      "description": "Component Name for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true,
+      "description": "Set Subject for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Set Description for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "required": false,
+      "description": "Set Notes for this ticket",
+      "location": "query"
+    },
+    {
+      "name": "assigned_to_user_id",
+      "type": "integer",
+      "required": false,
+      "description": "Assign this ticket to User ID",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset_id": {
+                "type": "integer"
+              },
+              "asset": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "device": {
+                "type": "string"
+              },
+              "component_name": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ticket_number": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 7,
+  "response_schemas_found": 3
+}

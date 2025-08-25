@@ -1,0 +1,126 @@
+{
+  "endpoint": "/reference/customavailabilityconfiguration",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/custom_availability_configuration",
+    "description": "Get all the custom availability configurations for an asset ID."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Asset ID",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "availability_config_id": {
+                "type": "integer"
+              },
+              "asset": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "basis": {
+                "type": "string"
+              },
+              "formula": {
+                "type": "string"
+              },
+              "reference_basis": {
+                "type": "string"
+              },
+              "reference_config": {
+                "type": "string"
+              },
+              "alarm_filter_column": {
+                "type": "string"
+              },
+              "alarm_level_filter": {
+                "type": "string",
+                "description": "of strings. alarm_level_filter"
+              },
+              "alarm_order_filter": {
+                "type": "string",
+                "description": "of strings. alarm_order_filter"
+              },
+              "unavailable_list": {
+                "type": "string",
+                "description": "of strings. unavailable_list"
+              },
+              "exclusion_list": {
+                "type": "string",
+                "description": "of strings. exclusion_list"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 1,
+  "response_schemas_found": 3
+}

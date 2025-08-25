@@ -1,0 +1,163 @@
+{
+  "endpoint": "/reference/curtailment",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/curtailment?aggregation=hourly",
+    "description": "The URL for this request expired after 30 days."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "start_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "end_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "aggregation",
+      "type": "string",
+      "required": true,
+      "description": "Defaults to hourly. Provide desired aggregation level",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "string",
+      "required": false,
+      "description": "Filter for one or more device ids",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "timezone_preference": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "aggregation": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "string"
+              },
+              "units": {
+                "type": "object",
+                "description": "Has additional fields"
+              },
+              "object": {
+                "type": "object"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string"
+              },
+              "timestamp_tz": {
+                "type": "string"
+              },
+              "device": {
+                "type": "string"
+              },
+              "grid_curtailment": {
+                "type": "number"
+              },
+              "env_curtailment": {
+                "type": "number"
+              },
+              "noise_curtailment": {
+                "type": "number"
+              },
+              "oem_curtailment": {
+                "type": "number"
+              },
+              "other_curtailment": {
+                "type": "number"
+              },
+              "wind_direction_curtailment": {
+                "type": "number"
+              },
+              "wind_resource_curtailment": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 5,
+  "response_schemas_found": 3
+}

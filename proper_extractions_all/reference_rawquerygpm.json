@@ -1,0 +1,95 @@
+{
+  "endpoint": "/reference/rawquerygpm",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/DataList?grouping=minute",
+    "description": "Returns datasource's values given a date range."
+  },
+  "query_parameters": [
+    {
+      "name": "dataSourceId",
+      "type": "integer",
+      "required": true,
+      "description": "The dataSource's database id.",
+      "location": "query"
+    },
+    {
+      "name": "startDate",
+      "type": "number",
+      "required": true,
+      "description": "Start time of the query in Unix Timestamp format.",
+      "location": "query"
+    },
+    {
+      "name": "endDate",
+      "type": "number",
+      "required": true,
+      "description": "End time of the query in Unix Timestamp format",
+      "location": "query"
+    },
+    {
+      "name": "aggregationType",
+      "type": "integer",
+      "required": true,
+      "description": "Operation to apply for the grouping. Sum without zeros = 0, Average = 1, Maximum = 6, Minimum = 7, Count = 9, Sum with zeros = 11",
+      "location": "query"
+    },
+    {
+      "name": "grouping",
+      "type": "string",
+      "required": true,
+      "description": "minute hour day week month quarter year",
+      "location": "query"
+    },
+    {
+      "name": "elementId",
+      "type": "integer",
+      "required": false,
+      "description": "Element Id if element level aggregation is needed. Plant level aggregation is returned if not passed.",
+      "location": "query"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "The page of results to retrieve.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 7,
+  "response_schemas_found": 2
+}

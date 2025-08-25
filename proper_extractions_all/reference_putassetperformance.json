@@ -1,0 +1,146 @@
+{
+  "endpoint": "/reference/putassetperformance",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "PUT",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/asset_performance?aggregation=daily",
+    "description": "The URL for this request expired after 30 days."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Provide Asset Id.",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": false,
+      "description": "Provide device Id. Leave it empty for asset level values.",
+      "location": "query"
+    },
+    {
+      "name": "string",
+      "type": "string",
+      "required": true,
+      "description": "Provide date in YYYY-MM-DD format for which category Id value needs to be updated. For monthly values provide the date for the first day of the month i.e. 2021-01-01",
+      "location": "query"
+    },
+    {
+      "name": "aggregation",
+      "type": "string",
+      "required": true,
+      "description": "Provide aggregation level of the category",
+      "location": "query"
+    },
+    {
+      "name": "category_id",
+      "type": "integer",
+      "required": true,
+      "description": "Provide category Id to update. Only Custom KPIs and Custom Availability can be updated.",
+      "location": "query"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "required": true,
+      "description": "Provide value for the category Id.",
+      "location": "query"
+    },
+    {
+      "name": "units",
+      "type": "string",
+      "required": false,
+      "description": "Provide units of the value.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              },
+              "month": {
+                "type": "string"
+              },
+              "day": {
+                "type": "string"
+              },
+              "aggregation": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category_id": {
+                "type": "integer"
+              },
+              "value": {
+                "type": "number"
+              },
+              "units": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 7,
+  "response_schemas_found": 3
+}

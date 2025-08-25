@@ -1,0 +1,108 @@
+{
+  "endpoint": "/reference/rawmappings",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/historian/historian_mappings",
+    "description": "Retrieves raw field mappings for a given asset."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "units": {
+                "type": "object",
+                "description": "Has additional fields"
+              },
+              "object": {
+                "type": "object"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "signal": {
+                "type": "string"
+              },
+              "data_type": {
+                "type": "string"
+              },
+              "measurement_type": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "timestamp_first_seen": {
+                "type": "string"
+              },
+              "timestamp_last_seen": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 1,
+  "response_schemas_found": 3
+}

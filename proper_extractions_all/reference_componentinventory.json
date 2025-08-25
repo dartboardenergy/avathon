@@ -1,0 +1,193 @@
+{
+  "endpoint": "/reference/componentinventory",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/component_inventory",
+    "description": "Get a list of all device components inventory for a given asset."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter for specific Device ID",
+      "location": "query"
+    },
+    {
+      "name": "component_name",
+      "type": "string",
+      "required": false,
+      "description": "Filter for specific component name",
+      "location": "query"
+    },
+    {
+      "name": "tracking_inventory_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter for specific Tracking Inventory ID",
+      "location": "query"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "The page of results to retrieve.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset_id": {
+                "type": "integer"
+              },
+              "asset": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "device": {
+                "type": "string"
+              },
+              "current_page": {
+                "type": "integer"
+              },
+              "number_of_pages": {
+                "type": "integer"
+              },
+              "number_of_results": {
+                "type": "integer"
+              },
+              "page_length": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tracking_inventory_id": {
+                "type": "integer"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "device": {
+                "type": "string"
+              },
+              "component_name": {
+                "type": "string"
+              },
+              "parent_component_name": {
+                "type": "string"
+              },
+              "component_manufacturer": {
+                "type": "string"
+              },
+              "component_model": {
+                "type": "string"
+              },
+              "component_part_number": {
+                "type": "string"
+              },
+              "component_serial_number": {
+                "type": "string"
+              },
+              "failure_date": {
+                "type": "string"
+              },
+              "inspection_date_last": {
+                "type": "string"
+              },
+              "inspection_date_next": {
+                "type": "string"
+              },
+              "installation_date": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "tracking_ticket_id": {
+                "type": "integer"
+              },
+              "version_number": {
+                "type": "integer"
+              },
+              "updated_at_timestamp": {
+                "type": "string"
+              },
+              "updated_at_timestamp_tz": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              },
+              "component_attributes": {
+                "type": "object",
+                "description": "Has additional fields"
+              },
+              "component_attributes_object": {
+                "type": "object"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 5,
+  "response_schemas_found": 3
+}

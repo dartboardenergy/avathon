@@ -1,0 +1,14 @@
+{
+  "endpoint": "/reference/security",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "",
+    "url": "",
+    "description": "All requests to the APM API need to include an API key. API keys will be used to validate and authorize access to the data. The Avathon team will generate and securely share API key upon request and set limited authorization on the key to restrict the data it can access. To increase the scope of dat"
+  },
+  "query_parameters": [],
+  "response_schemas": {},
+  "parameters_found": 0,
+  "response_schemas_found": 0
+}

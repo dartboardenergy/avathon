@@ -1,0 +1,177 @@
+{
+  "endpoint": "/reference/actualvspredicted",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/actual_vs_predicted",
+    "description": "Actual vs. Predicted Values"
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "component_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by predict component id",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "string",
+      "required": true,
+      "description": "Filter by devices (comma separated list of device_ids)",
+      "location": "query"
+    },
+    {
+      "name": "start_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by start date. Supported format is YYYY-MM-DD.",
+      "location": "query"
+    },
+    {
+      "name": "end_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by end date. Supported format is YYYY-MM-DD.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset_id": {
+                "type": "integer"
+              },
+              "asset": {
+                "type": "string"
+              },
+              "component_id": {
+                "type": "integer"
+              },
+              "component": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "current_page": {
+                "type": "integer"
+              },
+              "number_of_pages": {
+                "type": "integer"
+              },
+              "number_of_results": {
+                "type": "integer"
+              },
+              "page_length": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device_id": {
+                "type": "integer"
+              },
+              "device": {
+                "type": "integer"
+              },
+              "timestamp": {
+                "type": "string"
+              },
+              "timestamp_tz": {
+                "type": "string"
+              },
+              "actual_value": {
+                "type": "number"
+              },
+              "predicted_value": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "error_value": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "error_value": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 5,
+  "response_schemas_found": 3
+}

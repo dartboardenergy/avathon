@@ -1,0 +1,141 @@
+{
+  "endpoint": "/reference/assets",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/assets",
+    "description": "Get data of all subscribed assets."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "units": {
+                "type": "string"
+              },
+              "site_capacity": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset_id": {
+                "type": "integer"
+              },
+              "asset_type": {
+                "type": "string"
+              },
+              "asset_name": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lon": {
+                "type": "number"
+              },
+              "altitude": {
+                "type": "number"
+              },
+              "number_of_devices": {
+                "type": "integer"
+              },
+              "timezone_string": {
+                "type": "string"
+              },
+              "ppa": {
+                "type": "number"
+              },
+              "timezone_preference": {
+                "type": "string"
+              },
+              "availability_approval_preference": {
+                "type": "string"
+              },
+              "ptc": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "site_capacity_kw": {
+                "type": "number"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "ppa_preference": {
+                "type": "object",
+                "description": "Has additional fields"
+              },
+              "ppa_preference_object": {
+                "type": "object"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 1,
+  "response_schemas_found": 3
+}

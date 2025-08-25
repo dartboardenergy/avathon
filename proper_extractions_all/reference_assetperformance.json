@@ -1,0 +1,167 @@
+{
+  "endpoint": "/reference/assetperformance",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/asset_performance",
+    "description": "Get asset performance data for a given asset and year."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "aggregation",
+      "type": "string",
+      "required": false,
+      "description": "Provide desired aggregation level. Default aggregation is monthly.",
+      "location": "query"
+    },
+    {
+      "name": "year",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by specific Year",
+      "location": "query"
+    },
+    {
+      "name": "month",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by specific Month",
+      "location": "query"
+    },
+    {
+      "name": "day",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by specific day. Only applicable for daily aggregation. If not passed default value is 1.",
+      "location": "query"
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": false,
+      "description": "Can be a single category Id or a comma separated list of category Ids.",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter for specific Device Id.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "timezone_preference": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              },
+              "month": {
+                "type": "string"
+              },
+              "aggregation": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "year": {
+                "type": "number"
+              },
+              "month": {
+                "type": "number"
+              },
+              "day": {
+                "type": "number"
+              },
+              "category_id": {
+                "type": "integer"
+              },
+              "category": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              },
+              "units": {
+                "type": "string"
+              },
+              "device": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 7,
+  "response_schemas_found": 3
+}

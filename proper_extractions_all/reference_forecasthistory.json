@@ -1,0 +1,172 @@
+{
+  "endpoint": "/reference/forecasthistory",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_history",
+    "description": "Get all the forecast history data for an asset ID, algorithm ID and forecast_date."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "forecast_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by start date in YYYY-MM-DD format",
+      "location": "query"
+    },
+    {
+      "name": "algorithm_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Algorithm ID",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "integer"
+              },
+              "algorithm_id": {
+                "type": "integer"
+              },
+              "forecast_date": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "algorithm_name": {
+                "type": "string"
+              },
+              "forecast_at_timestamp": {
+                "type": "string"
+              },
+              "forecast_for_timestamp": {
+                "type": "string"
+              },
+              "power_kw_min": {
+                "type": "number"
+              },
+              "power_kw_avg": {
+                "type": "number"
+              },
+              "power_kw_max": {
+                "type": "number"
+              },
+              "fuel_forecast_min": {
+                "type": "string"
+              },
+              "fuel_forecast_avg": {
+                "type": "string"
+              },
+              "fuel_forecast_max": {
+                "type": "string"
+              },
+              "adjusted_power_kw_avg": {
+                "type": "string"
+              },
+              "forecast_at_timestamp_tz": {
+                "type": "string"
+              },
+              "forecast_for_timestamp_tz": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "error_percent_lower": {
+                "type": "string"
+              },
+              "error_percent_upper": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "error_percent_lower": {
+                "type": "string"
+              },
+              "error_percent_upper": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 3,
+  "response_schemas_found": 3
+}

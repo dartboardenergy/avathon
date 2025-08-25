@@ -1,0 +1,116 @@
+{
+  "endpoint": "/reference/gpmalarms",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/gpm/api/Alarms",
+    "description": "Retrieves alarms visible to the authenticated user. Last 60 days of alarms data are returned if start and end dates are not passed."
+  },
+  "query_parameters": [
+    {
+      "name": "plantId",
+      "type": "integer",
+      "required": true,
+      "description": "Filter for specific Plant ID",
+      "location": "query"
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "elementId",
+      "type": "string",
+      "required": false,
+      "description": "Filter by elements (comma separated list of elementIds)",
+      "location": "query"
+    },
+    {
+      "name": "fault_code",
+      "type": "integer",
+      "required": false,
+      "description": "Filter by fault code",
+      "location": "query"
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": false,
+      "description": "Filter by fault category",
+      "location": "query"
+    },
+    {
+      "name": "fault_type",
+      "type": "string",
+      "required": false,
+      "description": "Filter by fault type (comma separated list)",
+      "location": "query"
+    },
+    {
+      "name": "available",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter by fault availability",
+      "location": "query"
+    },
+    {
+      "name": "fault_order",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter to show secondary faults (default is false)",
+      "location": "query"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "The page of results to retrieve.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 10,
+  "response_schemas_found": 2
+}

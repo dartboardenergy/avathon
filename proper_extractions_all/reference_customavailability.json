@@ -1,0 +1,215 @@
+{
+  "endpoint": "/reference/customavailability",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/custom_availability?aggregation=daily",
+    "description": "Get all the custom availability values as per the asset_id, date, device_id and availability_config_id."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "start_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by start date in YYYY-MM-DD format",
+      "location": "query"
+    },
+    {
+      "name": "end_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by end date in YYYY-MM-DD format",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter for specific Device ID.",
+      "location": "query"
+    },
+    {
+      "name": "aggregation",
+      "type": "string",
+      "required": true,
+      "description": "Defaults to daily. Provide desired aggregation level",
+      "location": "query"
+    },
+    {
+      "name": "availability_config_id",
+      "type": "string",
+      "required": false,
+      "description": "Can be a single availability config ID or a comma separated list of availability config IDs.",
+      "location": "query"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "The page of results to retrieve.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "integer"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "timezone_preference": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "aggregation": {
+                "type": "string"
+              },
+              "availability_config_id": {
+                "type": "string"
+              },
+              "current_page": {
+                "type": "integer"
+              },
+              "number_of_pages": {
+                "type": "integer"
+              },
+              "number_of_results": {
+                "type": "integer"
+              },
+              "page_length": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "integer"
+              },
+              "availability_config_id": {
+                "type": "integer"
+              },
+              "availability_config_name": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "month": {
+                "type": "integer"
+              },
+              "day": {
+                "type": "integer"
+              },
+              "date": {
+                "type": "string"
+              },
+              "device": {
+                "type": "string"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "duration_secs_total": {
+                "type": "integer"
+              },
+              "total_production_kwh": {
+                "type": "number"
+              },
+              "total_reference_energy_kwh": {
+                "type": "number"
+              },
+              "duration_secs_alarm_unavailable": {
+                "type": "integer"
+              },
+              "duration_secs_alarm_exclusion": {
+                "type": "integer"
+              },
+              "unavailable_loss_kwh": {
+                "type": "number"
+              },
+              "exclusion_loss_kwh": {
+                "type": "number"
+              },
+              "formula": {
+                "type": "string"
+              },
+              "availability_value": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 7,
+  "response_schemas_found": 3
+}

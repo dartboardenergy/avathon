@@ -1,0 +1,228 @@
+{
+  "endpoint": "/reference/postforecastoutageevent",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "POST",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/forecast_outage_event",
+    "description": "Create a forecast outage event for an asset."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Asset ID for this outage event",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": true,
+      "description": "Device ID(s) associated with the event",
+      "location": "query"
+    },
+    {
+      "name": "time_stamp_tz",
+      "type": "string",
+      "required": true,
+      "description": "Timestamp for the event (Asset timezone)",
+      "location": "query"
+    },
+    {
+      "name": "resolution_time_stamp_tz",
+      "type": "string",
+      "required": true,
+      "description": "Resolution timestamp for the event (Asset timezone)",
+      "location": "query"
+    },
+    {
+      "name": "additional_indo",
+      "type": "string",
+      "required": false,
+      "description": "Additional information for the event",
+      "location": "query"
+    },
+    {
+      "name": "device_power_setpoint_kw",
+      "type": "string",
+      "required": true,
+      "description": "Power setpoint in kW for the device",
+      "location": "query"
+    },
+    {
+      "name": "iec_category",
+      "type": "integer",
+      "required": false,
+      "description": "IEC category ID for the event",
+      "location": "query"
+    },
+    {
+      "name": "gads_component_code_id",
+      "type": "integer",
+      "required": false,
+      "description": "GADS component code ID for the event",
+      "location": "query"
+    },
+    {
+      "name": "gads_category",
+      "type": "integer",
+      "required": false,
+      "description": "GADS category ID for the event",
+      "location": "query"
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "required": false,
+      "description": "Additional notes for the event",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset_id": {
+                "type": "integer"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "additional_info": {
+                "type": "string"
+              },
+              "time_stamp_tz": {
+                "type": "string"
+              },
+              "resolution_time_stamp_tz": {
+                "type": "string"
+              },
+              "device_power_setpoint_kw": {
+                "type": "number"
+              },
+              "iec_category": {
+                "type": "integer"
+              },
+              "gads_component_code_id": {
+                "type": "integer"
+              },
+              "gads_category": {
+                "type": "integer"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "integer"
+              },
+              "device_id": {
+                "type": "integer"
+              },
+              "additional_info": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string"
+              },
+              "timestamp_tz": {
+                "type": "string"
+              },
+              "resolution_timestamp": {
+                "type": "string"
+              },
+              "resolution_timestamp_tz": {
+                "type": "string"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "created_at_tz": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string",
+                "description": "| null"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "updated_at_tz": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              },
+              "iec_category": {
+                "type": "integer"
+              },
+              "gads_category": {
+                "type": "integer"
+              },
+              "gads_component_code": {
+                "type": "integer"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "power_setpoint": {
+                "type": "number"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 10,
+  "response_schemas_found": 3
+}

@@ -1,0 +1,144 @@
+{
+  "endpoint": "/reference/dcloss",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "GET",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/dc_loss?aggregation=daily",
+    "description": "The URL for this request expired after 30 days."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "Filter by Asset ID",
+      "location": "query"
+    },
+    {
+      "name": "start_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by start date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "end_date",
+      "type": "string",
+      "required": true,
+      "description": "Filter by end date. Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "aggregation",
+      "type": "string",
+      "required": true,
+      "description": "Defaults to daily. Provide desired aggregation level",
+      "location": "query"
+    },
+    {
+      "name": "device_id",
+      "type": "integer",
+      "required": false,
+      "description": "Filter for specific Device Id",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "timezone_preference": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "units": {
+                "type": "object",
+                "description": "Has additional fields"
+              },
+              "object": {
+                "type": "object"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string"
+                    },
+                    "dc_loss": {
+                      "type": "number"
+                    },
+                    "device": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 5,
+  "response_schemas_found": 3
+}

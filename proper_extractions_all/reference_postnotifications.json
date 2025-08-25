@@ -1,0 +1,239 @@
+{
+  "endpoint": "/reference/postnotifications",
+  "extraction_method": "proper_readmeio",
+  "endpoint_metadata": {
+    "title": "Avathon APM API",
+    "method": "POST",
+    "url": "https://sc-st-renewables-prod.apm.sparkcognition.com/v2/api/notifications?status=active&notification_rule_id=1",
+    "description": "The URL for this request expired after 30 days."
+  },
+  "query_parameters": [
+    {
+      "name": "asset_id",
+      "type": "integer",
+      "required": true,
+      "description": "An asset ID to associate with this notification.",
+      "location": "query"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "description": "Defaults to active. Set the status of the notification.",
+      "location": "query"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true,
+      "description": "The subject of the notification.",
+      "location": "query"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": true,
+      "description": "A message to include with the notification.",
+      "location": "query"
+    },
+    {
+      "name": "impacted_device_ids",
+      "type": "string",
+      "required": true,
+      "description": "Provide device Id or comma separated list of device Ids impacted by this notification.",
+      "location": "query"
+    },
+    {
+      "name": "user_email",
+      "type": "string",
+      "required": true,
+      "description": "The email of a user associated with this account that will be used as the creator of the notification.",
+      "location": "query"
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "required": false,
+      "description": "Add notes to a notification.",
+      "location": "query"
+    },
+    {
+      "name": "last_active_timestamp",
+      "type": "string",
+      "required": false,
+      "description": "A timestamp for when this notification was last active.Supported formats are YYYY-MM-DD and YYYY-MM-DDThh:mm:ss.",
+      "location": "query"
+    },
+    {
+      "name": "notification_rule_id",
+      "type": "integer",
+      "required": false,
+      "description": "Defaults to 1. Notification rule id if generating notification for a specific rule. Its default value is 1.",
+      "location": "query"
+    },
+    {
+      "name": "send_email",
+      "type": "string",
+      "required": false,
+      "description": "Add comma-separated list of emails to send notification email to.",
+      "location": "query"
+    },
+    {
+      "name": "send_sms",
+      "type": "string",
+      "required": false,
+      "description": "Add comma-separated list of phone numbers to send notification sms to.",
+      "location": "query"
+    },
+    {
+      "name": "additional_data",
+      "type": "string",
+      "required": false,
+      "description": "Add Json of additional data to a notification.",
+      "location": "query"
+    }
+  ],
+  "response_schemas": {
+    "200": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "user_email": {
+                "type": "string"
+              },
+              "notification_rule_id": {
+                "type": "integer"
+              },
+              "impacted_device_ids": {
+                "type": "integer",
+                "description": "of integers. impacted_device_ids"
+              },
+              "assets": {
+                "type": "string",
+                "description": "of strings"
+              }
+            }
+          },
+          "description": "Query container"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "notification_id": {
+                "type": "integer"
+              },
+              "asset": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "description": "active known_issue closed_resolved closed_unresolved"
+              },
+              "notification_rule": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string"
+              },
+              "timestamp_tz": {
+                "type": "string"
+              },
+              "last_active_timestamp": {
+                "type": "string"
+              },
+              "last_active_timestamp_tz": {
+                "type": "string"
+              },
+              "resolution_timestamp": {
+                "type": "string"
+              },
+              "resolution_timestamp_tz": {
+                "type": "string"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "impacted_devices": {
+                "type": "string",
+                "description": "of strings"
+              }
+            }
+          },
+          "description": "Data array container"
+        }
+      },
+      "description": "Response schema"
+    },
+    "400": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    },
+    "401": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Data array container"
+        },
+        "message": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "description": "container with 1 properties"
+        }
+      },
+      "description": "Response schema"
+    }
+  },
+  "parameters_found": 12,
+  "response_schemas_found": 3
+}
