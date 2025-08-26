@@ -41,16 +41,8 @@ class AvathonToolset:
     def _load_operations(self):
         """Load all operation definitions from OpenAPI spec."""
         try:
-            # Load from local spec file
-            spec_path = os.path.join(os.path.dirname(__file__), 'specs', 'avathon_OAS.json')
-            
-            if not os.path.exists(spec_path):
-                logger.error(f"OpenAPI spec not found at {spec_path}")
-                self._operations_by_name = {}
-                self._registry = {}
-                return
-            
-            oas_spec = load_openapi_spec(spec_path)
+            # Load from S3 first, fall back to local file
+            oas_spec = self._load_spec_file('avathon_OAS.json', 'avathon_OAS.json')
             
             # Extract operations from OpenAPI spec only (no Postman)
             oas_ops = list(OpenAPIExtractor(oas_spec).iter_operations())
@@ -67,6 +59,52 @@ class AvathonToolset:
             logger.error(f"Failed to load Avathon operations: {e}")
             self._operations_by_name = {}
             self._registry = {}
+    
+    def _load_spec_file(self, s3_filename: str, local_filename: str) -> dict:
+        """
+        Load spec file from S3 if available, otherwise from local filesystem.
+        
+        Args:
+            s3_filename: Filename in S3 bucket (e.g., 'avathon_OAS.json')
+            local_filename: Filename in local specs directory
+            
+        Returns:
+            Parsed JSON spec
+        """
+        import os
+        
+        # First try S3
+        try:
+            import boto3
+            from botocore.exceptions import NoCredentialsError, ClientError
+            
+            s3_client = boto3.client('s3')
+            s3_bucket = os.getenv('S3_BUCKET_NAME')
+            s3_key = f'Joule/mcp/avathon/{s3_filename}'
+            
+            logger.info(f"Attempting to load spec from S3: s3://{s3_bucket}/{s3_key}")
+            response = s3_client.get_object(Bucket=s3_bucket, Key=s3_key)
+            content = response['Body'].read()
+            spec = json.loads(content)
+            logger.info(f"Successfully loaded {s3_filename} from S3")
+            return spec
+            
+        except (NoCredentialsError, ClientError) as e:
+            logger.info(f"S3 load failed ({type(e).__name__}), falling back to local file")
+        except ImportError:
+            logger.info("boto3 not installed, using local file")
+        except Exception as e:
+            logger.warning(f"Unexpected error loading from S3: {e}, falling back to local file")
+        
+        # Fall back to local file
+        base_dir = os.path.dirname(__file__)
+        local_path = os.path.join(base_dir, 'specs', local_filename)
+        logger.info(f"Loading spec from local file: {local_path}")
+        
+        with open(local_path, 'r') as f:
+            spec = json.load(f)
+        logger.info(f"Successfully loaded {local_filename} from local filesystem")
+        return spec
     
     def get_available_tools(self) -> Dict[str, str]:
         """Get all available tool names and descriptions."""
