@@ -124,39 +124,21 @@ def build_tool_hierarchy():
                 'full_path': category
             })
     
-    # Build tree structure
-    tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    # Build simplified tree structure (flat categories for Avathon)
+    hierarchy = defaultdict(list)
     
-    for tool in categorized_tools:
+    # Add all tools to their categories
+    for tool in categorized_tools + uncategorized_tools:
         category = tool['category']
-        subcategory = tool.get('subcategory', 'General')
-        endpoint_group = tool.get('endpoint_group', 'General')
         
-        tree[category][subcategory][endpoint_group].append({
+        hierarchy[category].append({
             'name': tool['name'],
             'display_name': tool['display_name'],
             'description': tool['description']
         })
     
-    # Add uncategorized tools
-    if uncategorized_tools:
-        for tool in uncategorized_tools:
-            category = tool['category']
-            subcategory = tool.get('subcategory', 'General')
-            endpoint_group = tool.get('endpoint_group', 'General')
-            
-            tree[category][subcategory][endpoint_group].append({
-                'name': tool['name'],
-                'display_name': tool['display_name'],
-                'description': tool['description']
-            })
-    
     # Convert defaultdict to regular dict for JSON serialization
-    hierarchy = {}
-    for category, subcats in tree.items():
-        hierarchy[category] = {}
-        for subcat, endpoints in subcats.items():
-            hierarchy[category][subcat] = dict(endpoints)
+    hierarchy = dict(hierarchy)
     
     # Generate category names list
     category_names = sorted(hierarchy.keys())
